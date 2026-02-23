@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NIDS Web UI</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>NIDS Web UI (Linux Demo)</h1>
+    <p class="subtitle">واجهة ويب بجانب تطبيق سطح المكتب للتجربة والتعديل السريع.</p>
+
+    <section class="card">
+      <label for="modelSelect">Model</label>
+      <select id="modelSelect"></select>
+      <div id="modelInfo" class="hint"></div>
+
+      <label for="featureInput">Flow Features (CSV)</label>
+      <textarea id="featureInput" rows="10" placeholder="Paste comma-separated numeric features..."></textarea>
+
+      <div class="actions">
+        <button id="fillBtn">Fill Random Sample</button>
+        <button id="predictBtn" class="primary">Run Detection</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Result</h2>
+      <pre id="resultBox">No result yet.</pre>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
